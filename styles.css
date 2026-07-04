@@ -415,7 +415,7 @@ pre {
 
 .consult-card {
   display: flex;
-  min-height: 620px;
+  min-height: 660px;
   flex-direction: column;
   padding: clamp(24px, 4vw, 36px);
   background: rgba(255, 255, 255, 0.045);
@@ -523,14 +523,14 @@ pre {
 .consult-tags {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-bottom: 26px;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
 .consult-tags span {
   display: flex;
   align-items: center;
-  min-height: 54px;
+  min-height: 50px;
   padding: 12px 18px;
   color: #ddd6fe;
   background: rgba(139, 92, 246, 0.14);
@@ -562,7 +562,7 @@ pre {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 58px;
+  min-height: 54px;
   margin-top: auto;
   margin-bottom: 20px;
   color: #facc15;
