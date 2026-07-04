@@ -286,7 +286,6 @@ pre {
 
 .intro-grid span,
 .about-stats span,
-.service-grid p,
 .course-body p,
 .qr-card p {
   color: var(--muted);
@@ -379,22 +378,218 @@ pre {
 }
 
 .course-body p,
-.service-grid p,
 .qr-card p {
   margin: 0;
   font-size: 14px;
 }
 
 .service-section {
-  background: #fff;
+  background:
+    radial-gradient(circle at 12% 85%, rgba(15, 159, 110, 0.18), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(37, 99, 235, 0.18), transparent 34%),
+    #0d111c;
+  color: #fff;
 }
 
-.service-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.service-section .section-heading {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
-.service-grid article {
-  min-height: 180px;
+.service-section .section-kicker {
+  color: #4fd1c5;
+}
+
+.service-section .section-heading p {
+  color: #b8c1d4;
+}
+
+.consult-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.consult-card {
+  display: flex;
+  min-height: 560px;
+  flex-direction: column;
+  padding: clamp(24px, 4vw, 36px);
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.consult-card--advice {
+  border-color: rgba(167, 139, 250, 0.36);
+}
+
+.consult-card__head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.consult-icon {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #dbeafe;
+  background: rgba(37, 99, 235, 0.28);
+  border-radius: 8px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.consult-card--advice .consult-icon {
+  color: #f5d0fe;
+  background: rgba(219, 39, 119, 0.24);
+}
+
+.consult-card h3 {
+  font-size: clamp(24px, 3vw, 30px);
+}
+
+.consult-card__head p {
+  margin: 2px 0 0;
+  color: #aab4c8;
+}
+
+.consult-steps {
+  position: relative;
+  display: grid;
+  gap: 28px;
+  margin: 0 0 36px;
+  padding: 0;
+  list-style: none;
+}
+
+.consult-steps::before {
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  left: 21px;
+  width: 2px;
+  background: linear-gradient(#3b82f6, #12b981);
+  content: "";
+}
+
+.consult-steps li {
+  position: relative;
+  min-height: 52px;
+  padding-left: 70px;
+  counter-increment: step;
+}
+
+.consult-steps li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  color: #fff;
+  background: #3b82f6;
+  border-radius: 999px;
+  content: counter(step);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.consult-steps li:nth-child(4)::before {
+  background: #12b981;
+}
+
+.consult-steps strong {
+  display: block;
+  color: #fff;
+  font-size: 19px;
+}
+
+.consult-steps span {
+  display: block;
+  color: #aab4c8;
+}
+
+.consult-tags {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.consult-tags span {
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 12px 18px;
+  color: #ddd6fe;
+  background: rgba(139, 92, 246, 0.14);
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.consult-tags span::before {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  place-items: center;
+  margin-right: 10px;
+  color: #c4b5fd;
+  border: 2px solid #a78bfa;
+  border-radius: 999px;
+  content: "✓";
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.consult-tags span:last-child {
+  grid-column: 1 / -1;
+}
+
+.consult-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  margin-top: auto;
+  margin-bottom: 20px;
+  color: #facc15;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.32);
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.consult-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  margin-top: auto;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.consult-button--blue {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.consult-button--pink {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
 }
 
 .about-stats {
@@ -589,6 +784,7 @@ pre {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .consult-grid,
   .service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -628,6 +824,14 @@ pre {
     justify-self: start;
   }
 
+  .consult-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-card {
+    min-height: auto;
+  }
+
   .course-modal__panel {
     grid-template-columns: 1fr;
   }
@@ -643,6 +847,10 @@ pre {
   .intro-grid,
   .about-stats,
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-tags {
     grid-template-columns: 1fr;
   }
 
