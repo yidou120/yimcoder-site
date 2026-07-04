@@ -265,7 +265,7 @@ pre {
 }
 
 .intro-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .intro-grid div,
@@ -593,7 +593,7 @@ pre {
 }
 
 .about-stats {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .contact-section {
